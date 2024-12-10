@@ -1,0 +1,200 @@
+---
+output: github_document
+always_allow_html: true
+editor_options: 
+  markdown: 
+    wrap: 72
+  chunk_output_type: console
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%",
+  message = FALSE,
+  warning = FALSE,
+  fig.retina = 2,
+  fig.align = 'center'
+)
+```
+
+# planetaryhdi
+
+<!-- badges: start -->
+
+[![License: CC BY
+4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+<!-- badges: end -->
+
+The goal of planetaryhdi is to make data provide a cleaned datasets of planetary pressures-adjusted HDI Index for all countries.
+
+## Installation
+
+You can install the development version of planetaryhdi from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("openwashdata/planetaryhdi")
+```
+
+```{r}
+## Run the following code in console if you don't have the packages
+## install.packages(c("dplyr", "knitr", "readr", "stringr", "gt", "kableExtra"))
+library(dplyr)
+library(knitr)
+library(readr)
+library(stringr)
+library(gt)
+library(kableExtra)
+```
+
+Alternatively, you can download the individual datasets as a CSV or XLSX
+file from the table below.
+
+1.  Click Download CSV. A window opens that displays the CSV in
+    your browser.
+2.  Right-click anywhere inside the window and select "Save Page As...".
+3.  Save the file in a folder of your choice.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+extdata_path <- "https://github.com/openwashdata/planetaryhdi/raw/main/inst/extdata/"
+
+read_csv("data-raw/dictionary.csv") |> 
+  distinct(file_name) |> 
+  dplyr::mutate(file_name = str_remove(file_name, ".rda")) |> 
+  dplyr::rename(dataset = file_name) |> 
+  mutate(
+    CSV = paste0("[Download CSV](", extdata_path, dataset, ".csv)"),
+    XLSX = paste0("[Download XLSX](", extdata_path, dataset, ".xlsx)")
+  ) |> 
+  knitr::kable()
+
+```
+
+## Data
+
+The package provides access to Planetary pressures-adjusted HDI Index for all countries and UNDP defined sub-region in one dataset.
+
+```{r}
+library(planetaryhdi)
+```
+
+### planetaryhdi
+
+The dataset has
+`r nrow(planetaryhdi)` observations and `r ncol(planetaryhdi)`
+variables
+
+```{r}
+planetaryhdi |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+For an overview of the variable names, see the following table.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+readr::read_csv("data-raw/dictionary.csv", locale = locale(encoding = "UTF-8")) |>
+  mutate(across(everything(), ~ iconv(., from = "UTF-8", to = "UTF-8", sub = ""))) |> # Replace invalid UTF-8 characters with ""
+  dplyr::filter(file_name == "planetaryhdi.rda") |>
+  dplyr::select(variable_name:description) |>
+  knitr::kable() |>
+  kableExtra::kable_styling("striped") |>
+  kableExtra::scroll_box(height = "200px")
+```
+
+## Example
+
+### Planetary Pressures Adjusted HDI Index for all countries
+
+```{r}
+library(planetaryhdi)
+library(ggplot2)
+library(rnaturalearthdata)
+library(rnaturalearth)
+library(dplyr)
+
+# 2022 HDI worldwide 
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+# Check that planetaryhdi has the necessary columns
+if(!all(c("iso3c", "phdi") %in% colnames(planetaryhdi))) {
+  stop("planetaryhdi must have columns 'iso3c' and 'phdi'.")
+}
+
+# Join the world data with the planetaryhdi data
+world_map_data <- world |> 
+  left_join(planetaryhdi, by = c("iso_a3" = "iso3c"))
+
+# Handle any NA values that might have been introduced by the join
+world_map_data$phdi[is.na(world_map_data$phdi)] <- NA
+
+# Define HDI color palette
+hdi_colors <- c("#d73027", "#fc8d59", "#fee08b", "#fdae61", "#fdd49e", "#feedde", 
+                "#d9ef8b", "#a6d96a", "#66bd63", "#1a9850", "#00441b", "#003300", "#001a00", 
+                "#e0e0e0") 
+
+# Plot the map
+ggplot(data = world_map_data) +
+  geom_sf(aes(fill = cut(phdi, 
+                         breaks = c(-Inf, 0.399, 0.449, 0.499, 0.549, 0.599, 0.649, 0.699, 
+                                    0.749, 0.799, 0.849, 0.899, 0.950, Inf), 
+                         labels = c("≤ 0.399", "0.400–0.449", "0.450–0.499", "0.500–0.549", 
+                                    "0.550–0.599", "0.600–0.649", "0.650–0.699", 
+                                    "0.700–0.749", "0.750–0.799", "0.800–0.849", 
+                                    "0.850–0.899", "0.900–0.950", "≥ 0.950")))) +
+  scale_fill_manual(values = hdi_colors, na.value = "gray90", name = "HDI 2022 Brackets") +
+  theme_minimal() +
+  labs(title = "World Planetary Pressures Adjusted HDI (2022)") +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid = element_blank())
+
+```
+
+
+### Effects of Adjusting HDI with planetary pressures
+
+```{r fig.width=8, fig.height=6, message=FALSE, warning=FALSE}
+library(planetaryhdi)
+library(ggplot2)
+
+# Ensure the dataset has the necessary columns (hdi and phdi)
+if(!all(c("iso3c", "hdi", "phdi") %in% colnames(planetaryhdi))) {
+  stop("planetaryhdi must have columns 'hdi' and 'phdi'.")
+}
+
+# Create the scatter plot
+ggplot(planetaryhdi, aes(x = hdi, y = phdi, label = iso3c)) +
+  geom_point(aes(color = phdi), size = 1) +  # Points colored by phdi values
+  geom_text(aes(label = iso3c), hjust = 1.5, vjust = 1.5, size = 1.5) +  # Labels for countries
+  theme_minimal() +
+  labs(title = "HDI vs Planetary Pressures Adjusted HDI (2022)",
+       x = "Human Development Index (HDI)",
+       y = "Planetary Pressures Adjusted HDI (phdi)") +
+  theme(axis.text = element_text(size = 10),  # Adjust axis text size
+        axis.title = element_text(size = 12),  # Adjust axis title size
+        legend.position = "none")  # Remove the legend
+
+```
+
+## License
+
+Data are available as
+[CC-BY](https://github.com/openwashdata/%7B%7B%7Bpackagename%7D%7D%7D/blob/main/LICENSE.md).
+
+## Citation
+
+Please cite this package using:
+
+```{r}
+citation("planetaryhdi")
+```

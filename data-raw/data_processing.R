@@ -40,6 +40,15 @@ names(planetaryhdi) <- new_col_names
 # Drop the first row
 planetaryhdi <- planetaryhdi[-1, ]
 
+# Set all columns except country to numeric
+planetaryhdi <- planetaryhdi |>
+  mutate(across(-country, as.numeric))
+
+# Add iso3c names for country
+planetaryhdi <- planetaryhdi |>
+  mutate(iso3c = countrycode::countrycode(country, origin = "country.name", destination = "iso3c"))
+
+
 # Export Data ------------------------------------------------------------------
 usethis::use_data(planetaryhdi, overwrite = TRUE)
 fs::dir_create(here::here("inst", "extdata"))

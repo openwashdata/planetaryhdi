@@ -15,6 +15,7 @@
 #'   \item{co2_emissions_index}{Carbon dioxide emissions (production) index: Carbon dioxide emissions per capita (production-based) expressed as an index using a minimum value of 0 and a maximum value of 76.61 tonnes per capita. A high value of this index implies less pressure to the planet.}
 #'   \item{material_footprint_per_capita}{Material footprint per capita: Material Footprint (MF) is the attribution of global material extraction to domestic final demand of a country. The total material footprint is the sum of the material footprint for biomass, fossil fuels, metal ores and non-metal ores. This indicator is calculated as raw material equivalent of imports (RMEIM) plus domestic extraction (DE) minus raw material equivalents of exports (RMEEX). Per-capita MF describes the average material use for final demand.}
 #'   \item{material_footprint_index}{Material footprint index: Material footprint per capita expressed as an index using a minimum value of 0 and a maximum value of 140.82 tonnes per capita. A high value of this index implies less pressure to the planet.}
+#'   \item{iso3c}{ISO 3166-1 alpha-3 country code}
 #' }
 #' @source Obtained from UNDP Human Development Reports
 "planetaryhdi"
