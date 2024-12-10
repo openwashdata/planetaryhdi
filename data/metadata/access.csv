@@ -1,0 +1,3 @@
+fileName,name,contentUrl,encodingFormat
+planetaryhdi.csv,planetaryhdi,https://raw.githubusercontent.com/openwashdata/planetaryhdi/main/inst/extdata/planetaryhdi.csv,csv
+planetaryhdi.xlsx,planetaryhdi,https://raw.githubusercontent.com/openwashdata/planetaryhdi/main/inst/extdata/planetaryhdi.xlsx,ooxml

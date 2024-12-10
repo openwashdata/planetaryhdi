@@ -1,0 +1,36 @@
+{
+  "@context": "https://openwashdata.org/",
+  "@type": "Dataset",
+  "name": "planetaryhdi",
+  "description": "Provides data on Planetary Pressures Adjusted Human Development, adjusted by carbon emissions per capita (production related) and materials footprint per capita.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "openwashdata @ Global Health Engineering, ETH Zurich",
+    "url": "https://openwashdata.org/"
+  },
+  "datePublished": "2024-12-10",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "keywords": "hdi, planetary pressures, emissions per capita, sdgs",
+  "distribution": {
+    "@type": "DataDownload",
+    "url": "https://raw.githubusercontent.com/openwashdata/planetaryhdi/main/inst/extdata/planetaryhdi.csv",
+    "contentUrl": "https://raw.githubusercontent.com/openwashdata/planetaryhdi/main/inst/extdata/planetaryhdi.csv",
+    "encodingFormat": "text/csv"
+  },
+  "encodingFormat": "CSV",
+  "version": "1.0",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Worldwide"
+  },
+  "temporalCoverage": {
+    "@type": "DateTime",
+    "startDate": 2022,
+    "endDate": 2022
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Yash Dubey",
+    "email": "ydubey@ethz.ch"
+  }
+}
