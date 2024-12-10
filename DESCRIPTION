@@ -1,11 +1,10 @@
 Package: planetaryhdi
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Provides Data On Planetary Pressures Adjusted HDI 
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Yash Dubey
+Maintainer: Yash Dubey (ydubey@ethz.ch)
+Description: Provides data on Planetary Pressures Adjusted Human Development, adjusted by carbon emissions per capita (production related) and materials footprint per capita.
 License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
