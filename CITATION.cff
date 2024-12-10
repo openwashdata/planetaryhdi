@@ -1,0 +1,29 @@
+# --------------------------------------------
+# CITATION file created with {cffr} R package
+# See also: https://docs.ropensci.org/cffr/
+# --------------------------------------------
+ 
+cff-version: 1.2.0
+message: 'To cite package "planetaryhdi" in publications use:'
+type: software
+license: CC-BY-4.0
+title: 'planetaryhdi: Planetary Pressures Adjusted Human Development Index Data'
+version: 0.1.0
+doi: 10.5281/zenodo.14355748
+abstract: Provides data on Planetary Pressures Adjusted Human Development, adjusted
+  by carbon emissions per capita (production related) and materials footprint per
+  capita.
+authors:
+- family-names: Dubey
+  given-names: Yash
+  email: ydubey@ethz.ch
+  orcid: https://orcid.org/0009-0001-2849-970X
+repository-code: https://github.com/openwashdata/planetaryhdi
+url: https://github.com/openwashdata/planetaryhdi
+date-released: '2024-12-10'
+contact:
+- family-names: Dubey
+  given-names: Yash
+  email: ydubey@ethz.ch
+  orcid: https://orcid.org/0009-0001-2849-970X
+
