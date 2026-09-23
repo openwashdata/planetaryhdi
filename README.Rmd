@@ -28,7 +28,7 @@ knitr::opts_chunk$set(
 
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14355748.svg)](https://zenodo.org/doi/10.5281/zenodo.14355748)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14355747.svg)](https://zenodo.org/doi/10.5281/zenodo.14355747)
 [![R-CMD-check](https://github.com/openwashdata/planetaryhdi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/planetaryhdi/actions/workflows/R-CMD-check.yaml)
 
 <!-- badges: end -->
@@ -191,7 +191,7 @@ ggplot(planetaryhdi, aes(x = hdi, y = phdi, label = iso3c)) +
 ## License
 
 Data are available as
-[CC-BY](https://github.com/openwashdata/%7B%7B%7Bpackagename%7D%7D%7D/blob/main/LICENSE.md).
+[CC-BY](https://github.com/openwashdata/planetaryhdi/blob/main/LICENSE.md).
 
 ## Citation
 
