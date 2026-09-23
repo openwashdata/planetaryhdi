@@ -1,5 +1,5 @@
 
-url: https://github.com/openwashdata/planetaryhdi
+url: https://openwashdata.github.io/planetaryhdi/
 template:
   bootstrap: 5
   includes:

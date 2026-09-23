@@ -7,7 +7,8 @@ bibentry(bibtype = "Misc",
                          email = "ydubey@ethz.ch",
                          comment = c(ORCID = "0009-0001-2849-970X")),
          year = "2024",
-         doi = "10.5281/zenodo.14355748",
+         doi = "10.5281/zenodo.14355747",
          url = "https://github.com/openwashdata/planetaryhdi",
          abstract = "Provides data on Planetary Pressures Adjusted Human Development, adjusted by carbon emissions per capita (production related) and materials footprint per capita.",
-         version = "0.1.0")
+         keywords = "open data,washdata,human development index,planetary pressures,carbon dioxide emissions,material footprint,sdgs,emissions-per-capita,hdi,planetary-pressures",
+         version = "0.1.1")

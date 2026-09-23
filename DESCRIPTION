@@ -1,9 +1,7 @@
 Package: planetaryhdi
 Type: Package
 Title: Planetary Pressures Adjusted Human Development Index Data
-Version: 0.1.0
-Author: Yash Dubey
-Maintainer: Yash Dubey <ydubey@ethz.ch>
+Version: 0.1.1
 Description: Provides data on Planetary Pressures Adjusted Human Development, adjusted by carbon emissions per capita (production related) and materials footprint per capita.
 License: CC BY 4.0
 Encoding: UTF-8
@@ -14,8 +12,11 @@ Authors@R:
     person("Yash", "Dubey", , "ydubey@ethz.ch", role = c("aut", "cre"),
            comment = c(orcid = "0009-0001-2849-970X"))
 Language: en-GB
-Config/Needs/website: rmarkdownset
+Config/Needs/website: rmarkdown, dplyr, knitr, readr, stringr, gt, kableExtra, ggplot2, sf, rnaturalearth, rnaturalearthdata
 Date: 2024-12-10
 URL: https://github.com/openwashdata/planetaryhdi
 BugReports: https://github.com/openwashdata/planetaryhdi/issues
-RoxygenNote: 7.3.2
+X-schema.org-keywords: open data, washdata, human development index, planetary pressures, carbon dioxide emissions, material footprint, sdgs
+X-schema.org-spatialCoverage: Worldwide
+X-schema.org-temporalCoverage: 2021-01-01/2022-12-31
+Config/roxygen2/version: 8.0.0
