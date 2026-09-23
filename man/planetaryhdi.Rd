@@ -9,8 +9,8 @@ A tibble with 210 rows and 12 variables
 \describe{
   \item{hdi_rank}{Rank by HDI}
   \item{country}{Name of the country}
-  \item{hdi}{Human Development Index (HDI): A composite index measuring average achievement in three basic dimensions of human development (a long and healthy life, knowledge and a decent standard of living). See Technical note 1 at http://hdr.undp.org/sites/default/files/hdr2023_technical_notes.pdf for details on how the HDI is calculated.}
-  \item{phdi}{Planetary pressures-adjusted HDI (PHDI): HDI value adjusted by the level of carbon dioxide emissions and material footprint per capita to account for the excessive human pressure on the planet. It should be seen as an incentive for transformation. See Technical note 6 at http://hdr.undp.org/sites/default/files/hdr2023_technical_notes.pdf for details on how the PHDI is calculated.}
+  \item{hdi}{Human Development Index (HDI): A composite index measuring average achievement in three basic dimensions of human development (a long and healthy life, knowledge and a decent standard of living). See Technical note 1 at https://hdr.undp.org/sites/default/files/2023-24_HDR/hdr2023-24_technical_notes.pdf for details on how the HDI is calculated.}
+  \item{phdi}{Planetary pressures-adjusted HDI (PHDI): HDI value adjusted by the level of carbon dioxide emissions and material footprint per capita to account for the excessive human pressure on the planet. It should be seen as an incentive for transformation. See Technical note 6 at https://hdr.undp.org/sites/default/files/2023-24_HDR/hdr2023-24_technical_notes.pdf for details on how the PHDI is calculated.}
   \item{pct_diff_hdi}{Percentage Difference in HDI and Planetary HDI (calculated as:  [HDI - PHDI] / HDI)}
   \item{rank_diff_hdi}{Difference in rank between PHDI and HDI. Expressed as Rank(phdi) - Rank(hdi)}
   \item{adj_factor}{Adjustment factor for planetary pressures: Arithmetic average of the carbon dioxide emissions index and the material footprint index, both defined below. A high value implies less pressure on the planet.}
@@ -29,5 +29,9 @@ planetaryhdi
 }
 \description{
 Planetary pressures-adjusted HDI (PHDI) for 195 countries and territories and 15 UNDP aggregates (development groups, regions and the world), from the UNDP Human Development Report 2023/2024. Values refer to 2022, except carbon dioxide emissions per capita and its index, which refer to 2021. PHDI is HDI adjusted for production-based carbon dioxide emissions and material footprint per capita. The dataset also includes information on percentage difference in HDI after adjusting for planetary pressures and change in rank when the HDI is corrected for these pressures.
+}
+\examples{
+# Countries with the largest drop from HDI to PHDI
+head(planetaryhdi[order(-planetaryhdi$pct_diff_hdi), c("country", "hdi", "phdi", "pct_diff_hdi")])
 }
 \keyword{datasets}
