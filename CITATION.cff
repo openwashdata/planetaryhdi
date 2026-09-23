@@ -8,7 +8,7 @@ message: 'To cite package "planetaryhdi" in publications use:'
 type: dataset
 license: CC-BY-4.0
 title: 'planetaryhdi: Planetary Pressures Adjusted Human Development Index Data'
-version: 0.1.0
+version: 0.1.1
 doi: 10.5281/zenodo.14355747
 abstract: Provides data on Planetary Pressures Adjusted Human Development, adjusted
   by carbon emissions per capita (production related) and materials footprint per

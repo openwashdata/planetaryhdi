@@ -1,7 +1,7 @@
 Package: planetaryhdi
 Type: Package
 Title: Planetary Pressures Adjusted Human Development Index Data
-Version: 0.1.0
+Version: 0.1.1
 Author: Yash Dubey
 Maintainer: Yash Dubey <ydubey@ethz.ch>
 Description: Provides data on Planetary Pressures Adjusted Human Development, adjusted by carbon emissions per capita (production related) and materials footprint per capita.

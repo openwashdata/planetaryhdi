@@ -11,4 +11,4 @@ bibentry(bibtype = "Misc",
          url = "https://github.com/openwashdata/planetaryhdi",
          abstract = "Provides data on Planetary Pressures Adjusted Human Development, adjusted by carbon emissions per capita (production related) and materials footprint per capita.",
          keywords = "open data,washdata,human development index,planetary pressures,carbon dioxide emissions,material footprint,sdgs,emissions-per-capita,hdi,planetary-pressures",
-         version = "0.1.0")
+         version = "0.1.1")
