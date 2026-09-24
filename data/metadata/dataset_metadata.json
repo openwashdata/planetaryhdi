@@ -30,7 +30,7 @@
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "contactType": "Yash Dubey",
-    "email": "ydubey@ethz.ch"
+    "contactType": "Lars Schöbitz",
+    "email": "lschoebitz@ethz.ch"
   }
 }
