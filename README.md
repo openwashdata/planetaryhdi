@@ -7,7 +7,7 @@
 
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14355748.svg)](https://zenodo.org/doi/10.5281/zenodo.14355748)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14355747.svg)](https://zenodo.org/doi/10.5281/zenodo.14355747)
 [![R-CMD-check](https://github.com/openwashdata/planetaryhdi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/planetaryhdi/actions/workflows/R-CMD-check.yaml)
 
 <!-- badges: end -->
@@ -68,7 +68,7 @@ planetaryhdi |>
   gt::as_raw_html()
 ```
 
-<div id="putxbpgmos" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="nuprbwhuxi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -124,8 +124,7 @@ planetaryhdi |>
 <td headers="material_footprint_index" class="gt_row gt_right" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">0.8050923</td>
 <td headers="iso3c" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">ISL</td></tr>
   </tbody>
-  &#10;  
-</table>
+  &#10;</table>
 </div>
 
 For an overview of the variable names, see the following table.
@@ -133,119 +132,193 @@ For an overview of the variable names, see the following table.
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
 
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+
 <thead>
+
 <tr>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 variable_name
 </th>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 variable_type
 </th>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 description
 </th>
+
 </tr>
+
 </thead>
+
 <tbody>
+
 <tr>
+
 <td style="text-align:left;">
+
 hdi_rank
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Rank by HDI
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 country
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Name of the country
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 hdi
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Human Development Index (HDI): A composite index measuring average
-achievement in three basic dimensions of human developmenta long and
-healthy life, knowledge and a decent standard of living. See Technical
+achievement in three basic dimensions of human development (a long and
+healthy life, knowledge and a decent standard of living). See Technical
 note 1 at
-<http://hdr.undp.org/sites/default/files/hdr2023_technical_notes.pdf>
+<https://hdr.undp.org/sites/default/files/2023-24_HDR/hdr2023-24_technical_notes.pdf>
 for details on how the HDI is calculated.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 phdi
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Planetary pressures-adjusted HDI (PHDI): HDI value adjusted by the level
 of carbon dioxide emissions and material footprint per capita to account
 for the excessive human pressure on the planet. It should be seen as an
 incentive for transformation. See Technical note 6 at
-<http://hdr.undp.org/sites/default/files/hdr2023_technical_notes.pdf>
+<https://hdr.undp.org/sites/default/files/2023-24_HDR/hdr2023-24_technical_notes.pdf>
 for details on how the PHDI is calculated.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 pct_diff_hdi
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
-Percentage Difference in HDI and Planetary HDI (caluclated as: \[HDI -
+
+Percentage Difference in HDI and Planetary HDI (calculated as: \[HDI -
 PHDI\] / HDI)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 rank_diff_hdi
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Difference in rank between PHDI and HDI. Expressed as Rank(phdi) -
 Rank(hdi)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 adj_factor
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Adjustment factor for planetary pressures: Arithmetic average of the
 carbon dioxide emissions index and the material footprint index, both
 defined below. A high value implies less pressure on the planet.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 tco2_per_capita_prod
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Carbon dioxide emissions per capita (production): carbon dioxide
 emissions produced as a consequence of human activities (use of coal,
 oil and gas for combustion and industrial processes, gas flaring and
@@ -253,29 +326,45 @@ cement manufacture), divided by midyear population. Values are
 territorial emissions, meaning that emissions are attributed to the
 country in which they physically occur.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 co2_emissions_index
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Carbon dioxide emissions (production) index: Carbon dioxide emissions
 per capita (production-based) expressed as an index using a minimum
 value of 0 and a maximum value of 76.61 tonnes per capita. A high value
 of this index implies less pressure to the planet.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 material_footprint_per_capita
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Material footprint per capita: Material Footprint (MF) is the
 attribution of global material extraction to domestic final demand of a
 country. The total material footprint is the sum of the material
@@ -285,33 +374,52 @@ plus domestic extraction (DE) minus raw material equivalents of exports
 (RMEEX). Per-capita MF describes the average material use for final
 demand.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 material_footprint_index
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 Material footprint index: Material footprint per capita expressed as an
 index using a minimum value of 0 and a maximum value of 140.82 tonnes
 per capita. A high value of this index implies less pressure to the
 planet.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 iso3c
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
-ISO 3166-1 alpha-3 country code}
+
+ISO 3166-1 alpha-3 country code
 </td>
+
 </tr>
+
 </tbody>
+
 </table>
 
 </div>
@@ -364,7 +472,7 @@ ggplot(data = world_map_data) +
         panel.grid = element_blank())
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-7-1.png" alt="" width="100%" style="display: block; margin: auto;" />
 
 ### Effects of Adjusting HDI with planetary pressures
 
@@ -390,12 +498,12 @@ ggplot(planetaryhdi, aes(x = hdi, y = phdi, label = iso3c)) +
         legend.position = "none")  # Remove the legend
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-8-1.png" alt="" width="100%" style="display: block; margin: auto;" />
 
 ## License
 
 Data are available as
-[CC-BY](https://github.com/openwashdata/%7B%7B%7Bpackagename%7D%7D%7D/blob/main/LICENSE.md).
+[CC-BY](https://github.com/openwashdata/planetaryhdi/blob/main/LICENSE.md).
 
 ## Citation
 
@@ -406,8 +514,8 @@ citation("planetaryhdi")
 #> To cite package 'planetaryhdi' in publications use:
 #> 
 #>   Dubey Y (2024). "planetaryhdi: Planetary Pressures Adjusted Human
-#>   Development Index Data." doi:10.5281/zenodo.14355748
-#>   <https://doi.org/10.5281/zenodo.14355748>,
+#>   Development Index Data." doi:10.5281/zenodo.14355747
+#>   <https://doi.org/10.5281/zenodo.14355747>.
 #>   <https://github.com/openwashdata/planetaryhdi>.
 #> 
 #> A BibTeX entry for LaTeX users is
@@ -416,9 +524,10 @@ citation("planetaryhdi")
 #>     title = {planetaryhdi: Planetary Pressures Adjusted Human Development Index Data},
 #>     author = {Yash Dubey},
 #>     year = {2024},
-#>     doi = {10.5281/zenodo.14355748},
+#>     doi = {10.5281/zenodo.14355747},
 #>     url = {https://github.com/openwashdata/planetaryhdi},
 #>     abstract = {Provides data on Planetary Pressures Adjusted Human Development, adjusted by carbon emissions per capita (production related) and materials footprint per capita.},
-#>     version = {0.1.0},
+#>     keywords = {open data,washdata,human development index,planetary pressures,carbon dioxide emissions,material footprint,sdgs,emissions-per-capita,hdi,planetary-pressures},
+#>     version = {0.1.1},
 #>   }
 ```
