@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# planetaryhdi
+# planetaryhdi <a href="https://openwashdata.org"><img src="man/figures/logo.png" align="right" width="120" alt="openwashdata" /></a>
 
 <!-- badges: start -->
 
@@ -11,8 +11,6 @@
 [![R-CMD-check](https://github.com/openwashdata/planetaryhdi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/planetaryhdi/actions/workflows/R-CMD-check.yaml)
 
 <!-- badges: end -->
-
-A data package published by [openwashdata](https://openwashdata.org).
 
 The goal of planetaryhdi is to make data provide a cleaned datasets of
 planetary pressures-adjusted HDI Index for all countries.
@@ -508,6 +506,8 @@ Data are available as
 [CC-BY](https://github.com/openwashdata/planetaryhdi/blob/main/LICENSE.md).
 
 ## Citation
+
+Published by openwashdata, <https://openwashdata.org>.
 
 Please cite this package using:
 

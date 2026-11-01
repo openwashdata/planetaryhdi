@@ -15,7 +15,7 @@ Authors@R: c(
            comment = c(ORCID = "0000-0003-2196-5015"))
   )
 Language: en-GB
-Config/Needs/website: rmarkdown, dplyr, knitr, readr, stringr, gt, kableExtra, ggplot2, sf, rnaturalearth, rnaturalearthdata
+Config/Needs/website: rmarkdown, dplyr, knitr, readr, stringr, gt, kableExtra, ggplot2, sf, rnaturalearth, rnaturalearthdata, brand.yml
 Date: 2024-12-10
 URL: https://github.com/openwashdata/planetaryhdi
 BugReports: https://github.com/openwashdata/planetaryhdi/issues
@@ -32,4 +32,5 @@ Config/washr/publisher: Published by [openwashdata](https://openwashdata.org), a
 Config/washr/home: https://openwashdata.org
 Config/washr/catalog: https://openwashdata.org/pages/gallery/data/
 Config/washr/community: This package is part of [openwashdata](https://openwashdata.org). Browse the [data catalogue](https://openwashdata.org/pages/gallery/data/) or get the [newsletter](https://openwashdata.org/pages/newsletter/).
-Config/washr/version: 1.2.1
+Config/washr/version: 1.2.2
+Config/washr/brand: v1.1.0
