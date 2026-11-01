@@ -1,7 +1,5 @@
 # planetaryhdi
 
-A data package published by [openwashdata](https://openwashdata.org).
-
 The goal of planetaryhdi is to make data provide a cleaned datasets of
 planetary pressures-adjusted HDI Index for all countries.
 
@@ -169,6 +167,8 @@ Data are available as
 [CC-BY](https://github.com/openwashdata/planetaryhdi/blob/main/LICENSE.md).
 
 ## Citation
+
+Published by openwashdata, <https://openwashdata.org>.
 
 Please cite this package using:
 
